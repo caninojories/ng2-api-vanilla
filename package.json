@@ -12,7 +12,6 @@
     "test": "NODE_ENV=unittest mocha --exit $(find test/unit/** -name *.test.js)"
   },
   "pre-commit": [
-    "clean-js",
     "lint"
   ],
   "dependencies": {
