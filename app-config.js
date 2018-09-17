@@ -13,6 +13,7 @@ let utilitites = require('./lib/utilities');
 app.db = db;
 app.log = log;
 app.express = express;
+app.set('json spaces', config.express.jsonSpaces);
 app.use(bodyParser.urlencoded({
   extended: true
 }));

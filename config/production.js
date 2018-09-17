@@ -42,5 +42,8 @@ module.exports = deepCopy({}, {
     password: process.env.NG2_MONGO_PASSWORD,
     dbName: process.env.NG2_MONGO_DBNAME,
     authSource: process.env.NG2_MONGO_AUTHSOURCE
+  },
+  express: {
+    jsonSpaces: 0
   }
 });

@@ -51,5 +51,8 @@ module.exports = deepCopy(production, {
     password: 'ng2-api-password-dev',
     dbName: 'ng2-api',
     authSource: 'ng2-api'
+  },
+  express: {
+    jsonSpaces: 2
   }
 });
