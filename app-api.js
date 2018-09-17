@@ -26,11 +26,17 @@ router.use((req, res, next) => {
 });
 app.use('/api/v1', router);
 api.user(router);
-app.use('*', (req, res, next) => {
+app.use('/api/v1/*', (req, res, next) => {
   res.status(httpCodes.NOT_FOUND)
   .send(new rpc.ValidationError({
     msg: `Invalid Api: ${req.method} ${req.originalUrl}`
-  }));
+  }, httpCodes.NOT_FOUND));
+
+  next();
+});
+app.use(/\/$/, (req, res, next) => {
+  res.status(httpCodes.OK)
+  .send('Welcome to NG2 Api');
 
   next();
 });
