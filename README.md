@@ -1,5 +1,5 @@
 # NG2 Backend
-The backend service for the ng2 Api.
+The backend service for the ng2 Api. You can check as well the [ng2-spa](https://github.com/caninojories/ng2-spa).
 
 # Requirements
 1. [Node.JS](https://nodejs.org/en/download)
