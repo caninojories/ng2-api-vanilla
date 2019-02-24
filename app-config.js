@@ -41,7 +41,7 @@ app.use(function trafficLogger(req, res, next) {
   }, 'HTTP Request');
   res.end = function(chunk) {
     if (chunk) {
-      chunks.push(new Buffer(chunk));
+      chunks.push(new Buffer.from(chunk));
     }
 
     let body = Buffer.concat(chunks).toString('utf8');
@@ -49,9 +49,16 @@ app.use(function trafficLogger(req, res, next) {
       body = JSON.parse(body);
     }
 
-    req.log.info({
-      response: body
-    }, 'HTTP Response');
+    if (body.httpCode > 300) {
+      req.log.error({
+        response: body
+      }, 'HTTP Response');
+    } else {
+      req.log.info({
+        response: body
+      }, 'HTTP Response');
+    }
+
     resToReapply.apply(res, arguments);
   };
 
