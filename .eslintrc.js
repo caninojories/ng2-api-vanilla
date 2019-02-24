@@ -36,7 +36,7 @@ module.exports = {
     'max-params': [1, 4],
     'max-statements-per-line': [2, {max: 2}],
     'max-statements': [1, 25],
-    'new-cap': [1, {newIsCap: true, capIsNew: true}],
+    'new-cap': [1, {newIsCap: true, capIsNew: true, properties: false}],
     'new-parens': 2,
     'newline-per-chained-call': [2, { ignoreChainWithDepth: 3 }],
     'no-array-constructor': 2,
