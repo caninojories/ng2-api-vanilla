@@ -9,7 +9,7 @@
     "create-mongo-admin-user": "node lib/db-scripts/create-admin-user.js",
     "create-mongo-api-user": "node lib/db-scripts/create-api-user.js",
     "lint": "eslint .",
-    "test": "NODE_ENV=unittest mocha --exit $(find test/unit/** -name *.test.js)"
+    "test": "NODE_ENV=unittest $(npm bin)/mocha --exit $(find test/unit/** -name *.test.js)"
   },
   "pre-commit": [
     "lint"
@@ -18,18 +18,19 @@
     "assert-plus": "1.0.0",
     "bunyan": "1.8.12",
     "bunyan-format": "0.2.1",
-    "cors": "2.8.4",
-    "express": "4.16.3",
-    "express-validator": "5.3.0",
-    "jsonwebtoken": "8.3.0",
-    "mongoose": "5.2.15"
+    "cors": "2.8.5",
+    "express": "4.16.4",
+    "express-validator": "5.3.1",
+    "jsonwebtoken": "8.5.0",
+    "mongoose": "5.4.15"
   },
   "devDependencies": {
-    "chai": "4.1.2",
-    "commander": "2.18.0",
-    "eslint": "5.6.0",
+    "chai": "4.2.0",
+    "commander": "2.19.0",
+    "eslint": "5.14.1",
+    "mocha": "6.0.1",
     "pre-commit": "1.2.2",
-    "sinon": "6.3.3",
-    "supertest": "3.3.0"
+    "sinon": "7.2.4",
+    "supertest": "3.4.2"
   }
 }

@@ -41,7 +41,8 @@ app.use(function trafficLogger(req, res, next) {
   }, 'HTTP Request');
   res.end = function(chunk) {
     if (chunk) {
-      chunks.push(new Buffer.from(chunk));
+      const buffer = new Buffer.from(chunk);
+      chunks.push(buffer);
     }
 
     let body = Buffer.concat(chunks).toString('utf8');
