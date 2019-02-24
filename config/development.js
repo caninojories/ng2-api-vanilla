@@ -41,18 +41,18 @@ module.exports = deepCopy(production, {
   jwt: {
     secret: 'secret'
   },
-  mongo: {
-    admin: {
-      username: 'ng2-api',
-      password: 'admin-dev-password'
-    },
-    dbURL: 'mongodb://localhost:27017',
-    username: 'ng2-api-user',
-    password: 'ng2-api-password-dev',
-    dbName: 'ng2-api',
-    authSource: 'ng2-api'
-  },
   express: {
     jsonSpaces: 2
+  },
+  mongo: {
+    admin: {
+      username: 'ng2',
+      password: 'admin-dev-ng2'
+    },
+    dbURL: 'mongodb://localhost:27017',
+    dbOptions: '?authSource=ng2',
+    username: 'ng2-user',
+    password: 'ng2-password-dev',
+    dbName: 'ng2'
   }
 });

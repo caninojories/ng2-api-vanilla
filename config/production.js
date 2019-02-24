@@ -32,18 +32,18 @@ module.exports = deepCopy({}, {
   jwt: {
     secret: process.env.NG2_JWT_SECRET
   },
+  express: {
+    jsonSpaces: 0
+  },
   mongo: {
     admin: {
       username: process.env.NG2_MONGO_ADMIN_USERNAME,
-      password: process.env.NG2_MONGO_ADMIN_USERNAME
+      password: process.env.NG2_MONGO_ADMIN_PASSWORD
     },
     dbURL: process.env.NG2_MONGO_DBURL,
+    dbOptions: process.env.NG2_MONGO_OPTIONS,
     username: process.env.NG2_MONGO_USERNAME,
     password: process.env.NG2_MONGO_PASSWORD,
-    dbName: process.env.NG2_MONGO_DBNAME,
-    authSource: process.env.NG2_MONGO_AUTHSOURCE
-  },
-  express: {
-    jsonSpaces: 0
+    dbName: process.env.NG2_MONGO_DBNAME
   }
 });
