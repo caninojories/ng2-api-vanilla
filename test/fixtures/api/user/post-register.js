@@ -4,7 +4,14 @@ const data = {
   body: {
     email: 'caninojories@gmail.com',
     fullName: 'Jo-Ries Canino',
-    password: 'password'
+    password: 'password',
+    removePassword: () => {
+      return {
+        email: 'caninojories@gmail.com',
+        fullName: 'Jo-Ries Canino',
+        password: 'password'
+      };
+    }
   }
 };
 

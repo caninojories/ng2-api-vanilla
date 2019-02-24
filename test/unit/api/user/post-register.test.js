@@ -24,7 +24,7 @@ describe('POST /api/v1/user/register', function() {
     });
 
     saveUserStub = sandbox.stub(api.db.user.prototype, 'save').callsFake(() => {
-      return Promise.resolve(fixturesClone);
+      return Promise.resolve(fixturesClone.body);
     });
 
     request = supertest(api)
